@@ -43,6 +43,9 @@ import app from '../../fi';
      },
      methods:{
       async  saveImg(event){
+        if(!event.target.files[0]){
+                return
+            }
          const storage = getStorage(app)
          const refImg = ref(storage,`Bannieres/${event.target.files[0].name}`)
         const snapsot = await uploadBytes(refImg,event.target.files[0])
