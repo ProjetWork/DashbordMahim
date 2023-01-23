@@ -118,7 +118,7 @@ import app from '../../fi'
      
     },
     SaveProduct(){
-       if (this.Pname != '' && this.PCate !='' && this.Pprice !='' && this.PpromoPrice !='' && this.PFour!='' && this.stock !='' && this.PphotoCate != '' && this.Desc !='' && this.Pphoto.length !=0) {
+       if (this.Pname != '' && this.PCate !='' && this.Pprice !='' && this.PpromoPrice !='' && this.PFour!='' && this.stock !='' && this.PphotoCate != ''  && this.Pphoto.length !=0) {
         this.PpromoPrice = parseInt(this.PpromoPrice)
       this.Pprice=parseInt(this.Pprice)
       this.stock=parseInt(this.stock)

@@ -13,6 +13,10 @@ dist
 dist-ssr
 coverage
 *.local
+<<<<<<< HEAD
+=======
+.vscode
+>>>>>>> 278a046 (Initial version)
 
 /cypress/videos/
 /cypress/screenshots/
