@@ -1,6 +1,6 @@
 <script>
 import {defineComponent} from 'vue'
-import {getFirestore,setDoc,doc,collection,getDocs, updateDoc, arrayUnion} from 'firebase/firestore'
+import {getFirestore,setDoc,doc,collection,getDocs, updateDoc, arrayUnion, Timestamp} from 'firebase/firestore'
 import {getStorage,ref,uploadBytes,getDownloadURL} from 'firebase/storage'
 import Bannierre from '../components/Bannierre.vue'
 import app from '../../fi'
@@ -138,6 +138,7 @@ import app from '../../fi'
         FourName:takeName.FourName,
         CateId:this.PCate,
         PFour:this.PFour,
+        time:Timestamp.now()
         
       })
       updateDoc(doc(db,'CATEGORIES',this.PCate),{
@@ -154,6 +155,7 @@ import app from '../../fi'
         FourName:takeName.FourName,
         CateId:this.PCate,
         PFour:this.PFour,
+        time:Timestamp.now()
         })
       })
       alert('enregistrer')
