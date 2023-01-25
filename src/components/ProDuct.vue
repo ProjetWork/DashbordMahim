@@ -189,6 +189,9 @@ export default defineComponent ({
       this.Pprice=''
       this.PpromoPrice=''
       this.stock=''
+      this.Pphoto = [] 
+       this.PphotoCate = ''
+       this.Desc=''
        }else{
         alert('remplisser le formulaire')
        }
