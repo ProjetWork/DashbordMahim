@@ -6,9 +6,10 @@ import Bannierre from '../components/Bannierre.vue'
 import CateGorie from '../components/CateGorie.vue'
 import ProDuct from '../components/ProDuct.vue'
 import app from '../../fi'
+import CommAndes from '../components/CommAndes.vue'
   export default defineComponent ({
     name:'HomeView',
-    components:{Bannierre,CateGorie,ProDuct},
+    components:{Bannierre,CateGorie,ProDuct , CommAndes},
     data(){
       return {
         active:'home',
@@ -30,6 +31,8 @@ import app from '../../fi'
         this.type='fournisseur'
       }else if (x=='banniere'){
         this.type='banniere'
+      }else if (x==='commandes'){
+        this.type ="commandes"
       }
       this.active=x
       },
@@ -86,8 +89,11 @@ import app from '../../fi'
             <li class="nav-item" @click="changeMenu('add product')">
               <a class="nav-link" href="#" :class="{ active: active=='add product' }">AJouter un produits</a>
             </li>
-            <li class="nav-item" @click="changeMenu('banniere')">
+            <li class="nav-item" @click="changeMenu('banniere')"> 
               <a class="nav-link" href="#" :class="{ active: active=='banniere' }">AJouter une banniere</a>
+            </li>
+            <li class="nav-item" @click="changeMenu('commandes')">
+              <a class="nav-link" href="#" :class="{ active: active=='commandes' }">Les Commades</a>
             </li>
           
           </ul>
@@ -115,6 +121,8 @@ import app from '../../fi'
     </div>
     <!--pour ajout de bannier-->
    <Bannierre v-if="type=='banniere'" />
+   <!--pour voir les commandes -->
+   <CommAndes v-if="type == 'commandes'" />
 </template>
 <style scoped>
 nav{
