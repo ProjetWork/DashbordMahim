@@ -77,7 +77,7 @@ import app from '../../fi';
   computed : {
     serche(){
         if(this.recherche){
-          return this.Data.filter(e=> e.userid == this.recherche)
+          return this.Data.filter(e=> e.ID == this.recherche)
         }else{
             return this.Data 
         }
