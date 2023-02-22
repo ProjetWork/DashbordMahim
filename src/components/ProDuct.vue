@@ -6,11 +6,7 @@
         <input type="text" v-model="Pname" class="form-control" id="exampleFormControlInput1" placeholder="nom du produits">
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="mb-3">
-        <input type="number" v-model="PpromoPrice" class="form-control" id="exampleFormControlInput1" placeholder="Prix Promo">
-      </div>
-    </div>
+   
     <div class="col-md-4">
       <div class="mb-3">
         <input type="number" v-model="Pprice" class="form-control" id="exampleFormControlInput1" placeholder="Prix reel">
@@ -142,7 +138,7 @@ export default defineComponent ({
      
     },
     SaveProduct(){
-       if (this.Pname != '' && this.PCate !='' && this.Pprice !='' && this.PpromoPrice !='' && this.PFour!='' && this.stock !='' && this.PphotoCate != ''  && this.Pphoto.length !=0 && this.getSousCate !='') {
+       if (this.Pname != '' && this.PCate !='' && this.Pprice !=''  && this.PFour!='' && this.stock !='' && this.PphotoCate != ''  && this.Pphoto.length !=0 && this.getSousCate !='') {
         this.PpromoPrice = parseInt(this.PpromoPrice)
       this.Pprice=parseInt(this.Pprice)
       this.stock=parseInt(this.stock)
@@ -155,7 +151,6 @@ export default defineComponent ({
         product_thumb_image:this.PphotoCate,
         product_name:this.Pname,
         product_highlights:this.Desc,
-        regular_price:this.PpromoPrice,
         sales_price:this.Pprice,
         stock:this.stock,
         sku_code:'',
@@ -163,7 +158,7 @@ export default defineComponent ({
         CateId:this.PCate,
         PFour:this.PFour,
         time:Timestamp.now(),
-        SousCate:this.getSousCate
+        SousCate:this.getSousCate 
         
       })
       updateDoc(doc(db,'CATEGORIES',this.PCate),{

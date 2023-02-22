@@ -5,12 +5,12 @@ import {initializeApp} from 'firebase/app'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAd2Mbqj0P8QUzuqksXgpVLCvD0np5Cm30",
-  authDomain: "guicart-1581b.firebaseapp.com",
-  projectId: "guicart-1581b",
-  storageBucket: "guicart-1581b.appspot.com",
-  messagingSenderId: "134611960314",
-  appId: "1:134611960314:web:e36f40c849275222b82443"
+  apiKey: "AIzaSyCXFxlFAGVbd2rb_tSjgcRRbZCl6XOL6vo",
+  authDomain: "mahim-bc341.firebaseapp.com",
+  projectId: "mahim-bc341",
+  storageBucket: "mahim-bc341.appspot.com",
+  messagingSenderId: "878136765730",
+  appId: "1:878136765730:web:9374840d7adf96ea9bc97b"
 };
 
 // Initialize Firebase

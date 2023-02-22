@@ -80,20 +80,17 @@ import CommAndes from '../components/CommAndes.vue'
 <template>
  <nav>
         <ul class="nav nav-pills justify-content-center">
+
             <li class="nav-item" @click="changeMenu('home')">
-              <a class="nav-link " :class="{ active: active=='home' }"  aria-current="page" href="#">AJouter une Categorie</a>
+              <a class="nav-link " :class="{ active: active=='home' }"  aria-current="page" href="#">AJouter une Categorie </a>
             </li>
+             
             <li class="nav-item" @click="changeMenu('fournisseur')">
               <a class="nav-link" href="#" :class="{ active: active=='fournisseur' }">Ajouter un Four</a>
             </li>
+
             <li class="nav-item" @click="changeMenu('add product')">
               <a class="nav-link" href="#" :class="{ active: active=='add product' }">AJouter un produits</a>
-            </li>
-            <li class="nav-item" @click="changeMenu('banniere')"> 
-              <a class="nav-link" href="#" :class="{ active: active=='banniere' }">AJouter une banniere</a>
-            </li>
-            <li class="nav-item" @click="changeMenu('commandes')">
-              <a class="nav-link" href="#" :class="{ active: active=='commandes' }">Les Commades</a>
             </li>
           
           </ul>

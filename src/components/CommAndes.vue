@@ -11,15 +11,15 @@
     <tr>
       <th scope="col">Date</th>
       <th scope="col">Info U</th>
-      <th scope="col">Livraison</th>
-      <th scope="col">totales</th>
-      <th scope="col">Info Prod</th>
+      <th scope="col">Livraison </th>
+      <th scope="col">totales </th>
+      <th scope="col">Info Prod </th>
     </tr>
   </thead>
   <tbody>
-    <tr v-for="data in serche">
+    <tr v-for="data in serche"> 
       <th scope="row">{{ new Date(data.time.seconds*1000).toLocaleDateString('fr') }}</th>
-      <td>
+      <td> 
         CodeId : <strong>{{ data.userid }} </strong> <br>
         nom : <strong>{{ data.nom }} </strong> <br>
         contact : <strong> {{ data.contact }} </strong> <br>
@@ -35,7 +35,7 @@
       <td>
         avec code promo : <strong> {{ data.couponCode }}  </strong> <br>
         total : <strong> {{ data.total }}  </strong>  <br> 
-        Grand total : <strong> {{ data.grandtotal }} </strong>
+        Grand total : <strong> {{ data.grandtotal }} </strong> 
       </td>
       <td>
         <div v-for="P in data.products">
